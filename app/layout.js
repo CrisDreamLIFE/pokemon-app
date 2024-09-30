@@ -1,11 +1,11 @@
-import "@/styles/globals.css";
+import "./globals.css";
 import {Providers} from "./providers";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`antialiased`}
       >
         <Providers>
           {children}
