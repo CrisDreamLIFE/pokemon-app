@@ -2,6 +2,7 @@
 import { useParams } from 'next/navigation';
 import { useQuery, gql } from '@apollo/client';
 import { Image } from '@nextui-org/react';
+import { PokemonShowCard } from '@/app/components/PokemonShowCard';
 
 const GET_POKEMON = gql`
   query getPokemon($id: Int!) {
@@ -9,7 +10,10 @@ const GET_POKEMON = gql`
       id
       name
       types
+      height
+      weight
       imageUrl
+      baseExperience
     }
   }
 `;
@@ -30,15 +34,7 @@ export default function ShowPage() {
 
   return (
     <div>
-      <p h1>{pokemon.name}</p>
-      <Image
-          alt="Card background"
-          className="object-cover rounded-xl"
-          src={pokemon.imageUrl}
-          width={300}
-        />
-      <p h3>Types:</p>
-      <p>{pokemon.types.join(', ')}</p>
+      <PokemonShowCard pokemon={pokemon}/>
     </div>
   );
 };

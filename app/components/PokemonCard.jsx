@@ -9,7 +9,7 @@ export function PokemonCard ({ pokemon }) {
     <Card isPressable onPress={() => router.push(`/pokemons/${pokemon.id}`)}>
       <CardHeader className="pb-0 pt-2 px-4 flex-col items-center">
         <small className="text-default-700">{`N° ${pokemon.id}`}</small>
-        <h2 className="text-xl font-bold">{pokemon.name}</h2>
+        <h2 className="text-xl font-bold capitalize">{pokemon.name}</h2>
       </CardHeader>
       <CardBody className="overflow-visible py-0 items-center">
         <Image
