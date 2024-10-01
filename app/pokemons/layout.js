@@ -8,7 +8,7 @@ export default function RootLayout({ children }) {
         className="light text-foreground bg-background antialiased"
       >
         <Providers>
-        <p class="text-2xl font-bold text-center bg-green-200 py-2">Pokémon App</p>
+          <p class="text-2xl font-bold text-center bg-green-200 py-2">Pokémon App</p>
           {children}
         </Providers>
       </body>

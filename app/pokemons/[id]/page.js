@@ -20,10 +20,9 @@ const GET_POKEMON = gql`
 
 export default function ShowPage() {
   const { id } = useParams();
-  console.log("el id", id)
   const { data, loading, error } = useQuery(GET_POKEMON, {
     variables: { id: parseInt(id) },
-    skip: !id, // Solo ejecuta la consulta si id está definido
+    skip: !id,
   });
 
   if (loading) return <p>Loading...</p>;

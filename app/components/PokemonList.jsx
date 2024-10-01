@@ -1,4 +1,3 @@
-// components/PokemonList.jsx
 "use client";
 import { useQuery } from "@apollo/client";
 import { gql } from "@apollo/client";
@@ -31,20 +30,18 @@ export default function PokemonList({ limit, offset, types, search, currentPage,
 
   return (
     <div>
-      {/* Listado de Pokémon */}
       <div className="grid grid-cols-3 gap-4">
         {data.pokemonList.list.map((pokemon) => (
           <PokemonCard key={pokemon.id} pokemon={pokemon} />
         ))}
       </div>
 
-      {/* Paginación */}
       <div className="mt-5 flex justify-center">
         <Pagination
           showControls
           total={Math.ceil(totalPokemons / limit)}
-          initialPage={currentPage} // Página actual
-          onChange={onPageChange} // Controlar el cambio de página
+          initialPage={currentPage}
+          onChange={onPageChange}
         />
       </div>
     </div>
