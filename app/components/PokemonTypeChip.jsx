@@ -24,7 +24,7 @@ const typeColors = {
 export function PokemonTypeChip ({ types }) {
 
   return (
-    <div class="flex flex-wrap gap-x-2">
+    <div className="flex flex-wrap gap-x-2">
     {types.map((type, index) => (
       <Chip
         key={index}
