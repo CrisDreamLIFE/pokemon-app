@@ -25,8 +25,9 @@ export function PokemonTypeChip ({ types }) {
 
   return (
     <div class="flex flex-wrap gap-x-2">
-    {types.map((type) => (
+    {types.map((type, index) => (
       <Chip
+        key={index}
         size="sm"
         className={typeColors[type.toLowerCase()] || "bg-gray-500 text-white"}
       >
