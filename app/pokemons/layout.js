@@ -5,10 +5,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`antialiased`}
+        className="light text-foreground bg-background antialiased"
       >
         <Providers>
-          <p>title</p>
+        <p class="text-2xl font-bold text-center bg-green-200 py-2">Pokémon App</p>
           {children}
         </Providers>
       </body>
